@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #222;
+    color: white;
+    margin: 0;
+    padding: 0;
+    transition: background-color 1s ease;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.ball-container {
+    margin-top: 20px;
+}
+
+.ball {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.shake {
+    animation: shake 0.3s infinite alternate;
+}
+
+
+/* 🔥 Animasyonlar */
+@keyframes shake {
+    0% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes scale {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+
+/* 🔥 Animasyon sınıfları */
+.bounce { animation: bounce 2s ease infinite; }
+.rotate { animation: rotate 2s ease; }
+.scale { animation: scale 2s ease-in-out; }
+.pulse { animation: pulse 2s ease infinite; }
+
+#answerBox {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    display: inline-block;
+}
